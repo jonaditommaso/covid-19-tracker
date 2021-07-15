@@ -10,7 +10,7 @@ const Table = ({countries}) => {
                     <td>
                         {country}
                     </td>
-                    <td>
+                    <td >
                         <strong>
                             {numeral(cases).format('0,0')}
                         </strong>

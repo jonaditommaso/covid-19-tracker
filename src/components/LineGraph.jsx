@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import axios from 'axios';
 import options from './graphOptions';
-
+import '../styles/lineGraph.css';
 
 const LineGraph = ({typeData='cases'}) => {
 
@@ -42,7 +42,7 @@ const LineGraph = ({typeData='cases'}) => {
     }
 
     return ( 
-        <div>   
+        <div className="lineGraph">   
             {data?.length > 0 && (
                 <Line 
                     options={options}

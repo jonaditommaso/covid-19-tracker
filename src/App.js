@@ -83,9 +83,10 @@ function App() {
               value={country}
             >
               <MenuItem value="worldwide">Worldwide</MenuItem>
-              {countries.map(country => (
+              {countries.map((country, index) => (
               
-                <MenuItem value={country.value}>{country.name}</MenuItem>
+                <MenuItem value={country.value} key={index}> {country.name} </MenuItem>
+                
               ))}
               
             </Select>
@@ -131,7 +132,7 @@ function App() {
         <CardContent>
           <h3>Live cases by country</h3>
           <Table countries={tableData} />
-          <h3>Worldwide new cases</h3>
+          <h3 style={{marginTop: '20px'}}>Worldwide new cases</h3>
           <LineGraph typeData={typeData} />
         </CardContent>
       </Card>
